@@ -1,4 +1,4 @@
-package Model;
+package org.tevolvers.web.Model;
 
 import lombok.Data;
 

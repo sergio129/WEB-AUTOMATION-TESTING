@@ -1,4 +1,4 @@
-package Interfaces;
+package org.tevolvers.web.Interfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
