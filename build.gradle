@@ -24,7 +24,7 @@ tasks.withType(JavaCompile) {
 sourceCompatibility = 1.8
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.5.1'
+    serenityCoreVersion = '3.2.5'
     junitVersion = '4.13.2'
     assertJVersion = '3.23.1'
     logbackVersion = '1.2.10'
@@ -42,7 +42,6 @@ dependencies {
             "junit:junit:${junitVersion}",
             "io.rest-assured:rest-assured:${Assured}"
     implementation "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}"
 
     compileOnly "org.projectlombok:lombok:${LombokVersion}"

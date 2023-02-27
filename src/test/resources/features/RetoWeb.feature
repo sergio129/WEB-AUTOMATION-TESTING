@@ -1,8 +1,14 @@
 Feature: Agregar de diferentes productos al carrito de compras
 
-  @RegistrarUsuario
-  Scenario Outline:
-    Given Ingresamos pagina de Advantageon Line Shopping
-    When Ingresamos los datos para la creacion de nuevo usuario desde el archivo Registrar Nuevo Usuario
-    Then Validamos mensaje de registro exitoso
+  Background:
+    Given Ingresamos pagina de demoblaze
+
+  @RealziarPedido
+  Scenario Outline: Quiero hacer pedido condiferentes productos
+    When Ingreso el nombre de los productos para hacer la compra: <Phone>, <Laptops>, <Monitors>
+    And Escribo los datos para para realizar el pedido
+    Then Validamos mensaje de compra exitosa: "Thank you for your purchase!"
     Examples:
+      | Phone             | Laptops      | Monitors     |
+      | Samsung galaxy s6 | Sony vaio i7 | ASUS Full HD |
+
