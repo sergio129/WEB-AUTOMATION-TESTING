@@ -1,9 +1,11 @@
 package org.tevolvers.web.Interfaces;
 
+import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class PedidoPage {
+    private final Actor actor = Actor.named("Usuario");
     public static final Target Categoria_Celulares = Target.the("Seleccionamos la categoria celulares").located(By.xpath("/html/body/div[5]/div/div[1]/div/a[2]"));
     public static final Target Categoria_Computadores = Target.the("Seleccionamos la categoria Computadores").located(By.xpath("/html/body/div[5]/div/div[1]/div/a[3]"));
 
@@ -30,6 +32,13 @@ public class PedidoPage {
     public static final Target Boton_Comprar = Target.the("boton para finalizar la compra de pedido").locatedBy("/html/body/div[3]/div/div/div[3]/button[2]");
 
     public static final Target Modal_compra_Exitosa = Target.the("modal que muestra el mensaje si la compra fue exitosa").locatedBy("/html/body/div[10]/h2");
+
+    public static final Target Valor_total = Target.the("Valor Total de los productos").located(By.id("totalp"));
+
+    public static final Target Valor_Unitario = Target.the("Valor Total de los productos").locatedBy("/html/body/div[6]/div/div[1]/div/table/tbody/tr[{0}]/td[3]");
+    public static final Target Valor_Unitario_dos = Target.the("Valor Total de los productos").locatedBy("/html/body/div[6]/div/div[1]/div/table/tbody/tr['{0}']/td[3]");
+    public static final Target Valor_Unitario_Tres = Target.the("Valor Total de los productos").locatedBy("/html/body/div[6]/div/div[1]/div/table/tbody/tr['[0]']/td[3]");
+
 
 
 

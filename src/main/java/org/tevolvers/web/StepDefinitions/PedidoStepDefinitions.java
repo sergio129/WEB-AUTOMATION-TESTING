@@ -18,7 +18,9 @@ import org.tevolvers.web.Tareas.AgregarProductosTask;
 import org.tevolvers.web.Tareas.RealizarPedidoTask;
 import org.tevolvers.web.Utilidades.DatosPedidos;
 
-import static org.tevolvers.web.Interfaces.PedidoPage.Modal_compra_Exitosa;
+import javax.lang.model.SourceVersion;
+
+import static org.tevolvers.web.Interfaces.PedidoPage.*;
 
 public class PedidoStepDefinitions {
     @Managed(driver = "chrome")
@@ -57,6 +59,12 @@ public class PedidoStepDefinitions {
     public void validamosMensajeDeRegistroExitoso(String arg0) {
         actor.attemptsTo(
                 Ensure.that(Modal_compra_Exitosa).text().isEqualTo(arg0)
+
         );
+        actor.attemptsTo( Ensure.that(Valor_total).text().isEqualTo("1380")
+        );
+
+
+
     }
 }
