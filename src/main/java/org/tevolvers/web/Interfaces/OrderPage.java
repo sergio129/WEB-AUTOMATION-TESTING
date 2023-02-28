@@ -3,7 +3,7 @@ package org.tevolvers.web.Interfaces;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class PedidoPage {
+public class OrderPage {
 
     public static final Target LBL_PHONE_CATEGORY = Target.the("Seleccionamos la categoria celulares").located(By.xpath("/html/body/div[5]/div/div[1]/div/a[2]"));
     public static final Target LBL_COMPUTER_CATEGORY = Target.the("Seleccionamos la categoria Computadores").located(By.xpath("/html/body/div[5]/div/div[1]/div/a[3]"));

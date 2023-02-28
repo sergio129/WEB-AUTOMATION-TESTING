@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import org.tevolvers.web.Model.OrderModel;
 
-import static org.tevolvers.web.Interfaces.PedidoPage.*;
+import static org.tevolvers.web.Interfaces.OrderPage.*;
 
 @AllArgsConstructor
 public class MakeOrderInteraction implements Interaction {

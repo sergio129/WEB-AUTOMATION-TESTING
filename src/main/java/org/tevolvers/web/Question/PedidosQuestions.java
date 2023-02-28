@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
 
-import static org.tevolvers.web.Interfaces.PedidoPage.LBL_SUCCESS_BUY;
+import static org.tevolvers.web.Interfaces.OrderPage.LBL_SUCCESS_BUY;
 
 @AllArgsConstructor
 public class PedidosQuestions implements Question<Boolean> {

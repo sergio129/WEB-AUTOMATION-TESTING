@@ -19,7 +19,7 @@ import org.tevolvers.web.Tareas.addProductTask;
 import org.tevolvers.web.Utilidades.DataOrder;
 
 import static net.serenitybdd.screenplay.ensure.Ensure.that;
-import static org.tevolvers.web.Interfaces.PedidoPage.LBL_SUCCESS_BUY;
+import static org.tevolvers.web.Interfaces.OrderPage.LBL_SUCCESS_BUY;
 
 public class OrderStepDefinitions {
     @Managed(driver = "chrome")

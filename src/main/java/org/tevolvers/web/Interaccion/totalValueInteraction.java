@@ -6,8 +6,8 @@ import net.serenitybdd.screenplay.Interaction;
 import static java.lang.Integer.parseInt;
 import static java.lang.String.valueOf;
 import static net.serenitybdd.screenplay.ensure.Ensure.that;
-import static org.tevolvers.web.Interfaces.PedidoPage.LBL_PRODUCT_PRICE;
-import static org.tevolvers.web.Interfaces.PedidoPage.LBL_UNIT_PRICE;
+import static org.tevolvers.web.Interfaces.OrderPage.LBL_PRODUCT_PRICE;
+import static org.tevolvers.web.Interfaces.OrderPage.LBL_UNIT_PRICE;
 
 public class totalValueInteraction implements Interaction {
 

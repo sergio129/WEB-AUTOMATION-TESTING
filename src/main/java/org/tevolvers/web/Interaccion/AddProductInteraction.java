@@ -13,7 +13,7 @@ import java.time.Duration;
 
 import static java.lang.String.valueOf;
 import static net.serenitybdd.core.Serenity.getDriver;
-import static org.tevolvers.web.Interfaces.PedidoPage.*;
+import static org.tevolvers.web.Interfaces.OrderPage.*;
 
 @AllArgsConstructor
 public class AddProductInteraction implements Interaction {
