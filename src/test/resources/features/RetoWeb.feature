@@ -9,6 +9,6 @@ Feature: Agregar de diferentes productos al carrito de compras
     And Escribo los datos para para realizar el pedido
     Then Validamos mensaje de compra exitosa: "Thank you for your purchase!"
     Examples:
-      | Phone             | Laptops      | Monitors     |
-      | Samsung galaxy s6 | Sony vaio i7 | ASUS Full HD |
+      | Phone             | Laptops     | Monitors         |
+      | Samsung galaxy s6 | Dell i7 8gb | Apple monitor 24 |
 

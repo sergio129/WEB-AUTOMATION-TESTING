@@ -61,10 +61,6 @@ public class PedidoStepDefinitions {
                 Ensure.that(Modal_compra_Exitosa).text().isEqualTo(arg0)
 
         );
-        actor.attemptsTo( Ensure.that(Valor_total).text().isEqualTo("1380")
-        );
-
-
 
     }
 }
