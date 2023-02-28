@@ -15,10 +15,9 @@ import org.tevolvers.web.Interfaces.UrlPage;
 import org.tevolvers.web.Model.PedidoModel;
 import org.tevolvers.web.Model.ProductosModel;
 import org.tevolvers.web.Tareas.AgregarProductosTask;
+import org.tevolvers.web.Tareas.ValorTotalTask;
 import org.tevolvers.web.Tareas.RealizarPedidoTask;
 import org.tevolvers.web.Utilidades.DatosPedidos;
-
-import javax.lang.model.SourceVersion;
 
 import static org.tevolvers.web.Interfaces.PedidoPage.*;
 
@@ -62,5 +61,10 @@ public class PedidoStepDefinitions {
 
         );
 
+    }
+
+    @And("Calculamos la suma del valor de los productos sea igual al valor total")
+    public void calculamosLaSumaDelValorDeLosProductosSeaIgualAlValorTotal() {
+        actor.attemptsTo(ValorTotalTask.datos());
     }
 }
