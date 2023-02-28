@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
 
-import static org.tevolvers.web.Interfaces.PedidoPage.Modal_compra_Exitosa;
+import static org.tevolvers.web.Interfaces.PedidoPage.LBL_SUCCESS_BUY;
 
 @AllArgsConstructor
 public class PedidosQuestions implements Question<Boolean> {
@@ -14,7 +14,7 @@ public class PedidosQuestions implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return Modal_compra_Exitosa.of(String.valueOf(model)).resolveFor(actor).isVisible();
+        return LBL_SUCCESS_BUY.of(String.valueOf(model)).resolveFor(actor).isVisible();
     }
 
     public static PedidosQuestions isVisible(String model) {
