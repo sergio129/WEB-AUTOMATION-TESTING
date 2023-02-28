@@ -35,9 +35,7 @@ public class PedidoPage {
 
     public static final Target Valor_total = Target.the("Valor Total de los productos").located(By.id("totalp"));
 
-    public static final Target Valor_Unitario = Target.the("Valor Total de los productos").locatedBy("/html/body/div[6]/div/div[1]/div/table/tbody/tr[{0}]/td[3]");
-    public static final Target Valor_Unitario_dos = Target.the("Valor Total de los productos").locatedBy("/html/body/div[6]/div/div[1]/div/table/tbody/tr['{0}']/td[3]");
-    public static final Target Valor_Unitario_Tres = Target.the("Valor Total de los productos").locatedBy("/html/body/div[6]/div/div[1]/div/table/tbody/tr['[0]']/td[3]");
+    public static final Target Valor_Unitario = Target.the("Valor Unitario de los productos").locatedBy("/html/body/div[6]/div/div[1]/div/table/tbody/tr[{0}]/td[3]");
 
 
 

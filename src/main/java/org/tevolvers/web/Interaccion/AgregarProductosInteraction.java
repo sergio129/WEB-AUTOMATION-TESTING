@@ -44,36 +44,35 @@ public class AgregarProductosInteraction implements Interaction {
 
         actor.attemptsTo(Click.on(Porduct_Store),
                 Click.on(Categoria_Computadores),
-                Click.on(Seleccionar_Producto.of(String.valueOf(productos.getLaptops()))));
-
-        actor.attemptsTo(Click.on(Boton_Agregar_Carrito));
+                Click.on(Seleccionar_Producto.of(String.valueOf(productos.getLaptops()))),(Click.on(Boton_Agregar_Carrito)));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         alert.accept();
         actor.attemptsTo(Click.on(Porduct_Store),
                 Click.on(Categoria_Monitores),
                 Click.on(Seleccionar_Producto.of(String.valueOf(productos.getMonitors()))), Click.on(Boton_Agregar_Carrito));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        alert.accept();
         actor.attemptsTo(
                 Click.on(Porduct_Store),
                 Click.on(Opcion_ir_al_Carrito));
 
-
+        int datos;
+        int sum = 0;
         for (int i = 1; i <= 3; i++) {
-            int suma;
-            suma = Integer.parseInt(Valor_Unitario.of(String.valueOf(i)).resolveFor(actor).getText());
-            int sumar=suma++;
-            System.out.println("Suma de los total Productos es = " + sumar);
-
+            datos = Integer.parseInt(Valor_Unitario.of(String.valueOf(i)).resolveFor(actor).getText());
+            sum += datos;
         }
-        System.out.println("Pruebas Manual");
-        int Valor = Integer.parseInt(Valor_Unitario.of(String.valueOf(1)).resolveFor(actor).getText());
-        System.out.println("Valor unitario del producto:" + Valor);
-        int Valordos = Integer.parseInt(Valor_Unitario.of(String.valueOf(2)).resolveFor(actor).getText());
-        System.out.println("Valor unitario del producto:" + Valordos);
-        int Valortes = Integer.parseInt(Valor_Unitario.of(String.valueOf(3)).resolveFor(actor).getText());
-        System.out.println("Valor unitario del producto:" + Valortes);
-        int suma = Valor + Valordos + Valortes;
-        System.out.println("Suma Total de los productos :" + suma);
-        actor.attemptsTo(Ensure.that(Valor_total).text().isEqualTo(String.valueOf(suma)));
-
+        System.out.println("Suma de los total Productos es = " + sum);
+        actor.attemptsTo(Ensure.that(Valor_total).text().isEqualTo(String.valueOf(sum)));
         actor.attemptsTo(Click.on(Boton_Realizar_Pedido));
 
     }
