@@ -39,8 +39,7 @@ dependencies {
             "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
-            "junit:junit:${junitVersion}",
-            "io.rest-assured:rest-assured:${Assured}"
+            "junit:junit:${junitVersion}"
     implementation "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}"
 
